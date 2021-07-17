@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
-*{
+* {
    margin: 0;
    padding: 0;
    font-family: 'Noto Sans JP', sans-serif, Arial;
 }
 
+html{
+   scroll-behavior: smooth;
+}
+
 nav{
-   background-color: #710375;
-   padding: 1rem;
+   background-color: #000000;
    font-weight: 500;
+   position: fixed;
+   width: 100%;
 }
 
 nav ul{
@@ -19,10 +24,264 @@ nav ul{
 }
 
 nav ul li{
-   padding: 15px;
+   padding: 1rem;
 }
 
 nav ul li a{
    text-decoration: none;
    color: #fff;
+}
+
+header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 3rem;
+}
+
+header div#img-rocket {
+   display: flex;
+   justify-content: center;
+}
+
+header div p{
+   font-size: 2vw;
+   font-weight: 700;
+   color: #000000;
+}
+
+header div span{
+   font-size: 1vw;
+   font-weight: 500;
+   color: #000000;
+}
+
+header div#img-rocket img{
+   width: 60%;
+}
+
+section#sobre-mim{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 4rem;
+   background-color: #000000;
+}
+
+
+section#sobre-mim div img{
+   width: 60%;
+   border-radius: 50%;
+
+}
+
+section#sobre-mim div p{
+   font-size: 1.1vw;
+   text-align: justify;
+   color: rgb(255, 255, 255);
+   line-height: 2.5rem;
+}
+
+section#projetos{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 3rem;
+   flex-wrap: wrap;
+}
+
+section#projetos div{
+   width: 20rem;
+}
+
+section#projetos div img{
+   display: block;
+   margin: auto;
+}
+
+section#projetos div h2{
+   text-align: center;
+   padding: 1rem;
+}
+
+section#projetos div p{
+   text-align: justify;
+}
+
+section#projetos div{
+   padding: 2rem;
+}
+
+section#projetos div button{
+   border: 1px solid #000000;
+   background-color: #fff;
+   color: #000000;
+   padding: 1rem;
+   font-size: .8vw;
+   font-weight: 600;
+   border-radius: .5rem;
+   display: block;
+   margin: auto;
+   margin-top: 2rem;
+   cursor: pointer;
+   transition: .6s ease-out;
+}
+
+section#projetos div button:hover{
+   background-color: #000000;
+   color: rgb(255, 255, 255);
+   transform: scale(1.2);
+}
+
+section#habilidades{
+   padding: 3rem 10rem 3rem 10rem;
+   background-color: #d7e7ff;
+}
+
+section#habilidades h2{
+   text-align: center;
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+}
+
+section#habilidades p{
+   padding: 1rem;
+   font-size: 1.3rem;
+   font-weight: 600;
+}
+
+section#habilidades div{
+   display: flex;
+   border: 1px solid #000000;
+   border-radius: 1rem;
+}
+
+section#habilidades div span#python{
+   background-color: #000000;
+   color: #fff;
+   text-align: center;
+   padding: .3rem;
+   border-radius: 1rem;
+   width: 80%;
+}
+
+section#habilidades div span#html{
+   background-color: #1100ff;
+   color: #fff;
+   text-align: center;
+   padding: .3rem;
+   border-radius: 1rem;
+   width: 50%;
+}
+
+section#habilidades div span#css{
+   background-color: #ff0000;
+   color: #fff;
+   text-align: center;
+   padding: .3rem;
+   border-radius: 1rem;
+   width: 10%;
+}
+
+section#habilidades div span#javascript{
+   background-color: #000000;
+   color: #fff;
+   text-align: center;
+   padding: .3rem;
+   border-radius: 1rem;
+   width: 70%;
+}
+
+section#contato {
+   padding: 3rem 10rem 3rem 10rem;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+section#contato div#redes{
+   width: 100%;
+}
+
+section#contato div#redes h3{
+   text-align: center;
+   font-size: 2.5rem; 
+   margin-bottom: 2rem; 
+}
+
+section#contato div#redes div#icons{
+   display: flex;
+   justify-content: center;
+}
+
+section#contato div#redes div#icons a{
+   text-decoration: none; 
+   color: #000000;
+   font-size: 4rem;
+   padding: 2rem;
+   transition: all .4s ease-out; 
+}
+
+section#contato div#redes div#icons a:hover{
+   color: #585656;
+}
+
+section#contato div#redes div#icons a i{
+   transition: all .4s ease-out;
+}
+
+section#contato div#redes div#icons a i:hover{
+   transform: scale(1.2);
+}
+
+section#contato div#form{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+section#contato div#form h3{
+   width: 100%;
+   text-align: center;
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+}
+
+section#contato div#form form{
+   width: 50%;
+}
+
+section#contato div#form form input, textarea{
+   width: 100%;
+   padding: .5rem;
+   font-size: 1.2rem;
+   border: 1px solid #ccc;
+   margin-top: .5rem;
+   margin-bottom: 1rem;
+   outline: none; 
+}
+
+section#contato div#form form label{
+   font-size: 1.2rem;
+}
+
+section#contato div#form form button{
+   border: 1px solid #000000;
+   background-color: #fff;
+   color: #000000;
+   padding: 1rem;
+   font-size: .8vw;
+   font-weight: 600;
+   border-radius: .5rem;
+   display: block;
+   margin: auto;
+   cursor: pointer;
+   transition: .6s ease-out;
+   width: 40%;
+}
+
+section#contato div#form form button:hover{
+   background-color: #000000;
+   color: #fff;
+   transform: scale(1.2);
 }
