@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family==Lato:wght@400;700;900&amp;display=swap');
+
+*{
+    padding: 0;
+}
+
+nav{
+    font-family: lato, arial, helvetica, sans-serif;
+    display:flex;
+}
+
+nav a{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+nav div{
+  width:100%;
+}
+
+nav div ul{
+    display:flex;
+    list-style: none;
+    align-items: left;
+    float: right;
+}
+
+nav li{
+    position: relative;
+    display: block;
+    padding: 15px 10px;
+    color: gray;
+}
+
+span{
+    color: black;
+}
