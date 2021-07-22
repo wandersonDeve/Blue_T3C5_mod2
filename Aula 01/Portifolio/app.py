@@ -7,8 +7,8 @@ mail_setting = {
     "MAIL_PORT":465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": "",
-    "MAIL_PASSWORD": "",
+    "MAIL_USERNAME": "testeflask2021@gmail.com",
+    "MAIL_PASSWORD": "lavoisier50331",
 }
 
 app.config.update(mail_setting)
@@ -35,7 +35,7 @@ def send():
         )
         
         msg = Message(
-            subject='Contato do portifolio',
+            subject='Contato do portifolio',         
             sender=app.config.get('MAIL_USERNAME'),
             recipients=[app.config.get('MAIL_USERNAME')],
             body= f'''

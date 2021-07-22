@@ -198,6 +198,15 @@ section#habilidades div span#javascript{
    width: 70%;
 }
 
+section#habilidades div span#flask{
+   background-color: #ff0000;
+   color: #fff;
+   text-align: center;
+   padding: .3rem;
+   border-radius: 1rem;
+   width: 20%;
+}
+
 section#contato {
    padding: 3rem 10rem 3rem 10rem;
    display: flex;
@@ -290,4 +299,106 @@ section#contato div#form form button:hover{
    background-color: #000000;
    color: #fff;
    transform: scale(1.2);
+}
+
+footer p {
+   min-height: 4rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+footer hr {
+   width: 60%;
+   margin: auto;
+   border: 0.2px solid rgb(0, 0, 0);
+}
+
+footer a{
+   font-weight: bold;
+   text-decoration: none;
+   color: black;
+}
+
+footer a:hover{
+   color:red;
+}
+
+
+footer p {
+   min-height: 4rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+ 
+footer hr {
+   width: 60%;
+   margin: auto;
+   border: 0.2px solid #3359ec;
+}
+
+footer a#thiCodeLink {
+   text-decoration: none;
+   color: #3359ec;
+}
+
+footer a#thiCodeLink:hover {
+   color: #ff01ed;
+}
+
+footer {
+   margin-top: 3rem;
+}
+
+
+/* Página Send */
+
+section#success{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   background-color: rgb(235, 255, 235);
+}
+
+section#success div#card{
+   background-color: rgb(166, 218, 166);
+   text-align: center;
+   padding: 4rem;
+   border-radius: 2rem;
+   color: rgb(0, 88, 0);
+   width: 40%;
+}
+
+section#success div#card h1{
+   margin: 2rem 0rem;
+}
+
+section#success div#card i{
+   font-size: 5rem;
+}
+
+section#success div#card h3{
+   margin-bottom: 2rem;
+}
+
+section#success div#card p{
+   margin-bottom: 3rem;
+   width: 100%;
+   word-break: break-word;
+}
+
+section#success div#card a{
+   text-decoration: none;
+   padding: 1rem;
+   border: 1px solid rgb(0, 88, 0);
+   color:rgb(0, 88, 0);
+   border-radius: .4rem;
+   transition: all .4s ease-out;
+}
+
+section#success div#card a:hover{
+   background-color: rgb(0, 88, 0);
+   color: #fff;
 }
