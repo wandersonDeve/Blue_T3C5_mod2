@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../static/css/style.css">
+   <title>To do List</title>
+</head>
+<body>
+
+   <header>
+      <h1>{{titulo}}</h1>
+      <!-- action envia o form para a rota /new com o método POST depois que o botão submit é clicado -->
+      <form action="/new" method="POST">
+         <input type="text" name="item" id="item" placeholder="Adicione uma tarefa">
+         <button type="submit">Adicionar</button>
+      </form>
+   </header>
+
+   <section>
+
+      {% if itens != [] %} <!-- Se a lista de itens não estiver vazia mostra a tag a -->
+      <a href="/clear">Limpar lista</a>
+      {% endif %}
+
+      <ul>
+         <!-- Varre a lista itens, mostrando item por item na li -->
+         {% for item in itens %} 
+         <li class="itens">
+            {{item}}
+         </li>
+         {% endfor %}
+      </ul>
+   </section>
+
+   <script src="../static/js/script.js"></script>
+</body>
+</html>

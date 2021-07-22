@@ -31,7 +31,11 @@ nav ul li a{
    text-decoration: none;
    color: #fff;
 }
-
+@keyframes a{
+   100% { color: #ffc003;}
+}a:hover{
+   animation: a 0.5s linear forwards;   
+}
 header{
    display: flex;
    justify-content: center;
@@ -98,6 +102,7 @@ section#projetos div{
 section#projetos div img{
    display: block;
    margin: auto;
+   border-radius: 5%;
 }
 
 section#projetos div h2{

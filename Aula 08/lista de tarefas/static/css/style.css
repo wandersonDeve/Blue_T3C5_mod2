@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap'); /* Fonte pega do google fontes */
+
+/* Seletor universal zera as margens e paddings do navegador e adiciona a font para todos os textos da página */
+* {
+   margin: 0; 
+   padding: 0;
+   font-family: 'Noto Sans JP', sans-serif, Arial;
+}
+
+html, body {
+   width: 100%; /* Largura de 100% da tela disponível no html e no body */
+   height: 100%; /* Altura de 100% da tela disponível no html e no body */
+}
+
+header {
+   display: flex; /* Display flex em todos os elementos dentro do header */
+   justify-content: center; /* Centraliza todos os itens dentro do header */
+   flex-wrap: wrap; /* Quebrar linha caso não haja espaço na mesma linha */
+   width: 100%; /* Header ocupa 100% da tela disponível */
+   background-color: #3359ec; /* cor de fundo no header */
+}
+
+header h1{
+   width: 100%; /* H1 ocupa 100% da tela disponivel e joga o input pra outra linha */
+   text-align: center; /* centraliza o texto na tela */
+   padding: 4rem; /* espaçamento interna em todos os lados de 4rem */
+   color: #fff; /* cor do texto */
+   font-size: 3rem; /* tamanho do texto em 3rem */
+}
+
+header form{
+   width: 100%; /* form ocupa 100% da tela disponivel */
+   display: flex; /* display flex em todos os elementos filhos do form */
+   justify-content: center; /* Centraliza todos os elementos */
+   padding: 0 3rem 3rem 3rem; /* espaçamento interna de 3rem de todos os lados menos em cima */
+}
+
+header form input{
+   width: 60%; /* Largura de 60% no input*/
+   padding: .5rem; /* espaçamento interno de .5rem no input */
+   font-size: 1.2rem; /* Tamanho da fonte do texto que será digitado no input */
+   border: 1px solid #3359ec; /* borda do input */
+   outline: none; /* Tira a linha do input quando ele é clicado */
+}
+
+header form button{
+   border: 1px solid #3359ec; /* borda do botão */
+   background-color: #fff; /* Cor de fundo do botão */
+   color: #3359ec; /* cor do texto no botão */
+   padding: .5rem; /* espaçamento interno no botão */
+   font-size: 1.2rem; /* tamanho da font do botão */
+   font-weight: 600; /* peso da font do botão */
+   cursor: pointer; /* curso de "mãozinha" no botão */
+   transition: .3s ease-out; /* transição para o hover */
+   width: 10rem; /* largura fixa de 10rem */
+}
+
+header form button:hover{ /* hover serve para fazer algo quando passar o mouse no elemento */
+   background-color: #3359ec; /* muda a cor de fundo quando passar o mouse no botão */
+   color: #fff; /* muda a cor da fonte quando passar o mouse no botão */
+   border: 1px solid #ffff; /* muda a cor da borda quando passar o mouse no botão */
+}
+
+section a{
+   display: block; /* elemento fica em modo de bloco na tela */
+   margin-left: auto; /* margin a esquerda auto, graças ao display block, link vai para a direita totalmente */
+   text-decoration: none; /* tira toda a decoração do link (underline) */
+   color: #3359ec; /* cor do link */
+   font-size: 1.2rem; /* tamanho da fonte do link */
+   transition: .3s ease-out; /* transição para quando houver o hover no link */
+   width: 7rem; /* largura fixa do link */
+}
+
+section a:hover{
+   color: #aabbff; /* muda a cor da fonte quando passar o mouse no botão */
+}
+
+section{
+   padding: 4rem; /* espaçamento interno da section */
+}
+
+section ul{
+   list-style: none; /* tira os "pontinhos" da ul */
+}
+
+section ul li{
+   padding: 1rem; /* espaçamento interno em cada li */
+   cursor: pointer; /* quando passar o mouse na li, o cursor sera a "mãozinha" */
+   border-bottom: .1rem solid #ccc; /* borda inferior em cada li */
+   font-size: 1.2rem; /* tamanho da font da li */
+   transition: .3s ease-out; /* transição pra quando passar o mouse no li */
+}
+
+section ul li:hover{
+   background-color: #ccc; /* muda a cor de fundo quando passar o mouse no botão */
+}
