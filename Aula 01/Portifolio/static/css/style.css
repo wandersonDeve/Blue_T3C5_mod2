@@ -171,6 +171,15 @@ section#habilidades div span#python{
    width: 80%;
 }
 
+section#habilidades div span#bootstrap{
+   background-color: #ff0000;
+   color: #fff;
+   text-align: center;
+   padding: .3rem;
+   border-radius: 1rem;
+   width: 40%;
+}
+
 section#habilidades div span#html{
    background-color: #1100ff;
    color: #fff;
@@ -186,7 +195,7 @@ section#habilidades div span#css{
    text-align: center;
    padding: .3rem;
    border-radius: 1rem;
-   width: 10%;
+   width: 20%;
 }
 
 section#habilidades div span#javascript{
@@ -319,33 +328,7 @@ footer a{
    text-decoration: none;
    color: black;
 }
-
-footer a:hover{
-   color:red;
-}
-
-
-footer p {
-   min-height: 4rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
  
-footer hr {
-   width: 60%;
-   margin: auto;
-   border: 0.2px solid #3359ec;
-}
-
-footer a#thiCodeLink {
-   text-decoration: none;
-   color: #3359ec;
-}
-
-footer a#thiCodeLink:hover {
-   color: #ff01ed;
-}
 
 footer {
    margin-top: 3rem;
@@ -401,4 +384,24 @@ section#success div#card a{
 section#success div#card a:hover{
    background-color: rgb(0, 88, 0);
    color: #fff;
+}
+
+.carousel-item{
+   height:40rem;
+}
+
+.carousel-caption{
+   background-color: rgba(26, 24, 24, 0.5);
+   color: #ffffff;
+}
+
+.btn-primary{
+   background-color:black;
+   border-color: black;
+
+}
+
+.btn-primary:hover{
+   background-color:rgb(0, 0, 0);
+   border-color: black;
 }
