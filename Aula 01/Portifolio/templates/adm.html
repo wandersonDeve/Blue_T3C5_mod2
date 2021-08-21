@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../static/css/adm.css">
+    <title>ADM</title>
+</head>
+<body>
+
+    <article id="msg">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </article>
+
+    <aside id="left">
+        
+        <h1>Administração</h1>
+        <ul>
+            <a id="btn-criar"><li>
+                <i class="fa fa-th-list" aria-hidden="true"></i>
+                Criar projetos</li>
+            </a>  
+            <a id="btn-listar"><li>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                Listar projetos</li>
+            </a> 
+            <a href="/"><li>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Home</li>
+            </a>
+            <a href="/"><li>
+                <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                Sair</li>
+            </a> 
+             
+        </ul>
+    </aside>
+    
+    <section id="body">
+
+        <article id="new">
+            {% if projeto == '' %}
+            <form action='/new' method="POST">
+            <h1>Cadastre um novo projeto</h1>
+            {% else %}
+            <form action='/edit/{{projeto.id}}' method="POST">
+            <h1>Atualize o projeto</h1>
+            {% endif %}   
+
+                <label for="nome">Nome</label>
+                <input type="text" placeholder="Nome do projeto" id="nome" name="nome" value="{{projeto.nome}}">
+
+                <label for="imagem">Imagem</label>
+                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem" value="{{projeto.imagem}}">
+
+                <label for="link">Link</label>
+                <input type="text" placeholder="Link do projeto" id="link" name="link" value="{{projeto.link}}">
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"
+                    placeholder="Digite a descrição do projeto">
+                    {{projeto.descricao}}
+                </textarea>
+                <div>
+                    {% if projeto == '' %}
+                    <button type="submit">Enviar</button>
+                    {% else %}
+                    <a href="/adm">Cancelar</a>
+                    <button type="submit">atualizar</button>
+                    {% endif %}
+                </div>
+                
+            </form>
+
+        {% if projetos != undefined %}
+        <article id="lista">
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Imagem</th>
+                        <th>Link</th>
+                        <th style="text-align:center">Edição</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for p in projetos %}
+                    <tr>
+                        <td>{{p.id}}</td>
+                        <td>{{p.nome}}</td>
+                        <td><a href="{{p.imagem}}" target="_blank">{{p.imagem}}</a></td>
+                        <td><a href="{{p.link}}" target="_blank">{{p.link}}</a></td>
+                        <td>
+                            <a href="/edit/{{p.id}}">Editar</a>
+                            <a href="/{{p.id}}">Apagar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </article>
+        {% endif %}
+
+    </section>
+
+    <aside id="right">        
+        <h1>Instruções</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aspernatur assumenda odio iste officia ea accusamus voluptate possimus sit facilis deleniti, fugit impedit laudantium cum vitae. Minus est beatae earum?</p>
+    </aside>
+
+
+    {% if projetoDel != undefined %}
+      <section class="modal">
+         <div id="card">
+
+            <a href="/adm" id="fechar"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <h2>Confirmação</h2>
+            <hr>
+
+            <p>Deseja realmente apagar o projeto: <span>{{projetoDel.nome}}</span> </p>
+            <div id="btns">
+               <a class="btn-cancelar" id="close" href="/adm">Cancelar</a>
+               <a class="btn-apagar" href="/delete/{{projetoDel.id}}">Apagar</a>
+            </div>
+         </div>
+      </section>
+      {% endif %}
+
+    <script src="../static/js/adm.js"></script>
+</body>
+<script src="../static/js/adm.js"></script>
+
+</html>
